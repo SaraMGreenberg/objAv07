@@ -1,0 +1,13 @@
+{
+    "name": "objAv07",
+    "version": "7.0.0",
+    "manifest_version": 1,
+    "project_type": "application",
+    "executable_type": "c",
+    "executable": "objAv07.script",
+    "author": "myke predko",
+    "minimum_firmware_version": 40,
+    "dependencies": [
+        "jadeapplications/stdPanelOutline"
+    ]
+}
