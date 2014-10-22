@@ -6,11 +6,10 @@ Simple Object Avoidance Program.
 ### Project Information
 ```
 Type              : C
-Version           : 02.0
+Version           : 1.0
 Author            : myke predko
-Firmware          : 40
+Firmware          : 42
 ```
-
 
 ### Release History:
 2014.09.20 - Initial Release.
