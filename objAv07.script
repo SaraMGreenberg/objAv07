@@ -50,11 +50,11 @@ str                         outString;
         syscall(setpanelvalue, "rightSide:" + itos(rightSide));
         rearMiddle = stoi(syscall(ircenterrear, ""));
         syscall(setpanelvalue, "rearMiddle:" + itos(rearMiddle));
-        if (30 > leftFront) {
+        if (30 > rightFront) {
             syscall(motorleftset, "100");  syscall(motorrightset, "-100");
             syscall(delay, "500");
         }
-        else if (30 > rightFront ) {
+        else if (30 > leftFront ) {
             syscall(motorleftset, "-100");  syscall(motorrightset, "100");
             syscall(delay, "500");
         }
