@@ -40,7 +40,7 @@ str                         outString;
 
     syscall(cleardisplay, "");
     for (; "RUN:" == syscall(tostring, "4:" + syscall(getactivepanelstatus, ""));) {
-      /*  leftFront = stoi(syscall(irleftfront, ""));
+        leftFront = stoi(syscall(irleftfront, ""));
         syscall(setpanelvalue, "leftFront:" + itos(leftFront));
         rightFront = stoi(syscall(irrightfront, ""));
         syscall(setpanelvalue, "rightFront:" + itos(rightFront));
@@ -49,7 +49,7 @@ str                         outString;
         rightSide = stoi(syscall(irrightside, ""));
         syscall(setpanelvalue, "rightSide:" + itos(rightSide));
         rearMiddle = stoi(syscall(ircenterrear, ""));
-        syscall(setpanelvalue, "rearMiddle:" + itos(rearMiddle)); */
+        syscall(setpanelvalue, "rearMiddle:" + itos(rearMiddle)); 
         if (30 > rightFront && rightFront > 15) {
             syscall(motorleftset, "100");  syscall(motorrightset, "-100");
             syscall(delay, "500");
