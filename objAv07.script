@@ -29,6 +29,9 @@ int                         rightSide;
 int                         rearMiddle;
 str                         outString;
 
+int                         distanceThresh = 60;
+int                         tooClose = 15;
+
 
     syscall(motorleftset, "0");  syscall(motorrightset, "0");
 
@@ -50,15 +53,15 @@ str                         outString;
         syscall(setpanelvalue, "rightSide:" + itos(rightSide));
         rearMiddle = stoi(syscall(ircenterrear, ""));
         syscall(setpanelvalue, "rearMiddle:" + itos(rearMiddle)); 
-        if (30 > rightFront && rightFront > 15) {
+        if (distanceThresh > rightFront && rightFront > tooClose) {
             syscall(motorleftset, "100");  syscall(motorrightset, "-100");
             syscall(delay, "500");
         }
-        else if (30 > leftFront && leftFront > 15) {
+        else if (distanceThresh > leftFront && leftFront > tooClose) {
             syscall(motorleftset, "-100");  syscall(motorrightset, "100");
             syscall(delay, "500");
         }
-        else if (15 >= leftFront || 15 >= rightFront) {
+        else if (tooClose >= leftFront || tooClose >= rightFront) {
             syscall(motorleftset, "0");  syscall(motorrightset, "0");
             syscall(delay, "500");
         }
